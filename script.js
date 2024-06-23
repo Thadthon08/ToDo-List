@@ -19,6 +19,10 @@ toggleMode.addEventListener("click", function () {
 function add() {
   let input = document.getElementById("input").value;
   let task = document.querySelector(".task");
+  if (input === "") {
+    alert("Please enter a task");
+    return;
+  }
   task.innerHTML += `<div><h4>${input}</h4><button type="button" >Delete</button></div>`;
   document.getElementById("input").value = "";
 }
